@@ -153,8 +153,6 @@ class BaseAgent:
                 # Get command for this step
                 command = step.get('command', '')
                 if not command:
-                    # In a real implementation, you might use an LLM to generate a command here
-                    # For this simulation, we'll use a default command based on the step description
                     command = f"echo 'Executing: {step.get('description', 'step ' + str(i))}'"
                 
                 # Execute the command
@@ -170,9 +168,6 @@ class BaseAgent:
                 # Check if the step failed
                 if not result.get('success', False):
                     logger.warning(f"Step {i+1} failed: {result.get('stderr', '')}")
-                    
-                    # In a real implementation, you might have step-specific recovery logic here
-                    # For now, we'll just continue to the next step
             
             # Determine overall task success
             success = all(step.get('success', False) for step in step_results)

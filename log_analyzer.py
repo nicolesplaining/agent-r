@@ -2,7 +2,7 @@ import os
 import json
 import glob
 from pathlib import Path
-from typing import Dict, List, Tuple, Optional, Set
+from typing import Dict, List, Optional
 from collections import Counter
 from failure_types import FailureDetector
 import logging

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Agent-R Implementation: Enhancing LLM Agents with Self-Reflection Capabilities
 

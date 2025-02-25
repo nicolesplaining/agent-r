@@ -1,11 +1,8 @@
-import os
 import json
-import glob
 from pprint import pprint
 import matplotlib.pyplot as plt
 import numpy as np
-from collections import Counter, defaultdict
-import pandas as pd
+from collections import Counter
 from failure_types import FailureDetector, FailureType
 from agent_r import AgentR, BaseAgent
 from recovery_decorator import recover_from_failure
