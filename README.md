@@ -81,8 +81,8 @@ Agent-R operates in two phases:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/agent-r.git
-cd agent-r
+git clone https://github.com/nicolesplaining/CURIS.git
+cd CURIS
 
 # Install dependencies
 pip install -r requirements.txt
