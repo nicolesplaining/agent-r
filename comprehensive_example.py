@@ -191,47 +191,6 @@ def truncate_text(text, max_length=100):
         return text
     return text[:max_length] + "..."
 
-
-def visualize_comparison(comparison):
-    """
-    Visualize the comparison between successful and failed logs.
-    """
-    # Extract data for visualization
-    metrics = list(comparison.keys())
-    success_values = [comparison[metric]['success'] for metric in metrics]
-    failure_values = [comparison[metric]['failure'] for metric in metrics]
-    
-    # Create a figure
-    fig, ax = plt.subplots(figsize=(10, 6))
-    
-    # Set width of bars
-    bar_width = 0.35
-    
-    # Set position of bar on X axis
-    br1 = np.arange(len(metrics))
-    br2 = [x + bar_width for x in br1]
-    
-    # Make the plot
-    ax.bar(br1, success_values, width=bar_width, label='Success')
-    ax.bar(br2, failure_values, width=bar_width, label='Failure')
-    
-    # Add labels and title
-    ax.set_xlabel('Metrics')
-    ax.set_ylabel('Count')
-    ax.set_title('Comparison of Successful vs Failed Agent Logs')
-    ax.set_xticks([r + bar_width/2 for r in range(len(metrics))])
-    ax.set_xticklabels(metrics)
-    
-    # Add legend
-    ax.legend()
-    
-    # Save the figure
-    plt.savefig('agent_comparison.png')
-    plt.close()
-    
-    print("Visualization saved to 'agent_comparison.png'")
-
-
 def load_json_file(file_path):
     """Load a JSON file."""
     try:
