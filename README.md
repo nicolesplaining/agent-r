@@ -98,7 +98,7 @@ python main.py --mode analyze
 
 ### Running the Demo
 
-To run a demonstration of Agent-R:
+To run a hard-coded demonstration:
 
 ```bash
 python main.py --mode demo
@@ -136,14 +136,6 @@ print(overview)
 patterns = analyzer.find_common_failure_patterns()
 print(patterns)
 ```
-
-## Case Study: Avatar Challenge
-
-The repository includes a case study of the Avatar CTF challenge, demonstrating how Agent-R can identify and recover from failures. The analysis shows:
-
-1. Common failure types in the challenge
-2. How Agent-R would recover from these failures
-3. The effectiveness of applying revision trajectories
 
 ## References
 
