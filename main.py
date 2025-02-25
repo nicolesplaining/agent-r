@@ -24,8 +24,7 @@ from comprehensive_example import (
     load_avatar_logs,
     agent_r_demonstration,
     analyze_agent_behaviors,
-    compare_success_vs_failure,
-    visualize_comparison
+    compare_success_vs_failure
 )
 
 

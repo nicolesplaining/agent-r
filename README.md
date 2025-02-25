@@ -90,7 +90,7 @@ pip install -r requirements.txt
 
 ### Analyzing Logs
 
-To analyze agent logs in the `data_by_challenges` directory:
+To analyze (identify and categorize errors in) agent logs in the `data_by_challenges` directory:
 
 ```bash
 python main.py --mode analyze
