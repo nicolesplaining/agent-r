@@ -135,11 +135,9 @@ class AgentLogAnalyzer:
         failure_count = 0
         
         for log_file in log_files:
-            # Analyze the log file
             analysis = self.analyze_log_file(log_file)
             analyses.append(analysis)
-            
-            # Update counts
+    
             if analysis['success']:
                 success_count += 1
             else:

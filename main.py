@@ -16,7 +16,6 @@ import json
 import sys
 from pprint import pprint
 
-# Import our modules
 from failure_types import FailureType, FailureDetector
 from recovery_decorator import RecoveryStrategy, recover_from_failure, with_failure_recovery
 from log_analyzer import AgentLogAnalyzer
@@ -38,17 +37,14 @@ def analyze_logs(data_dir="data_by_challenges"):
         print(f"Error: Directory {data_dir} not found.")
         return
     
-    # Initialize the log analyzer
     analyzer = AgentLogAnalyzer(data_dir)
     
-    # Scan all logs
     print("Scanning all logs...")
     overview = analyzer.scan_logs()
     
     print("\nLog Analysis Overview:")
     pprint(overview)
     
-    # Find common failure patterns
     print("\nFinding common failure patterns...")
     patterns = analyzer.find_common_failure_patterns()
     
@@ -76,7 +72,6 @@ def demo():
     """Run a demonstration of Agent-R."""
     print("Running Agent-R demonstration...")
     
-    # Run the demonstration
     agent_r_demonstration()
     
     # Check if the avatar logs are available

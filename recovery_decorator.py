@@ -4,10 +4,8 @@ import re
 import logging
 from typing import Dict, Any, List, Optional, Callable
 
-# Import our failure_types module
 from failure_types import FailureType, FailureDetector
 
-# Get logger from failure_types
 logger = logging.getLogger(__name__)
 
 class RecoveryStrategy:
@@ -24,7 +22,6 @@ class RecoveryStrategy:
         # Get the erroneous command
         last_command = context.get('command', '')
         
-        # Simple corrections for common syntax errors
         corrected_command = RecoveryStrategy._fix_common_syntax_errors(last_command)
         
         # If correction is different from original, suggest it
@@ -226,7 +223,6 @@ def with_failure_recovery(max_retries=3, allowed_failures=None):
                         # Reset command history to break the loop
                         detector.command_history = []
                         retries += 1
-                        # You might want to modify args here to force a different approach
                         continue
                         
                     else:

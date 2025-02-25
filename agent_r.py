@@ -1104,7 +1104,6 @@ class AgentR:
             for i, cmd in enumerate(bad_commands):
                 output += f"{i+1}. {cmd}\n"
             
-            # Reflection
             output += f"\n--- Reflection ---\n{traj['reflection']}\n"
             
             # Good commands (post-reflection)
