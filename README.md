@@ -1,4 +1,4 @@
-# CURIS: Self-Reflection for Language Model Agents
+# Self-Reflection for Language Model Agents
 
 This program identifies failure scenarios from the Cybench agent logs and handles these failures through the Agent-R framework for enhancing language model agents with self-reflection capabilities.
 
@@ -31,7 +31,7 @@ The implementation consists of the following components:
 
 ## Failure Types
 
-After manually looking through the logs, I classified failures into three main categories:
+Failures are classified into three main categories:
 
 ### Execution Failures
 - **MALFORMED_COMMAND**: Syntax errors in commands
@@ -51,7 +51,7 @@ After manually looking through the logs, I classified failures into three main c
 
 ## Recovery Strategies
 
-I implemented the following recovery strategies for different types of failures:
+The following recovery strategies for different types of failures were implemented:
 
 1. **Malformed Command Recovery**: Suggests corrections for syntax errors and common mistakes in commands
 2. **Loop Detection Recovery**: Breaks execution loops by forcing exploration of alternative paths
